@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filip Matić | Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-dark text-light">
+    <!-- Navigation -->
+    <nav class="custom-navbar container-fluid">
+      <div class="d-flex justify-content-between align-items-center px-3 py-2">
+        <div class="nav-section">
+          <span class="nav-item-label">filip_matic</span>
+        </div>
+
+        <div class="nav-section d-flex gap-4">
+          <a href="#" class="nav-item-label active">_hello</a>
+          <a href="#" class="nav-item-label">_about-me</a>
+          <a href="#" class="nav-item-label">_projects</a>
+        </div>
+
+        <div class="nav-section">
+          <span class="nav-item-label">_contact-me</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="container hero-content d-flex align-items-center justify-content-center text-center"
+    >
+      <div class="col-md-6 naslov">
+        <p class="henlo">// Hello world. My name is</p>
+        <h1 class="display-4 fw-bold typewriter">Filip Matić</h1>
+        <h5 class="text-primary">&gt; Data science student</h5>
+
+        <div class="mt-4 text-start code-snippet henlo">
+          <p>// find my profile on Github:</p>
+          <p>
+            <span class="text-success">const</span>
+            <span class="text-info">githubLink</span> =
+            <a class="text-danger" href="#">"https://github.com/example/url"</a>
+          </p>
+        </div>
+        <span class="cursor"></span>
+        <div class="status-badge">📍 Split, Croatia • ✅ Open to work</div>
+      </div>
+      <div class="col-md-6"></div>
+    </section>
+
+    <section class="about-me container-fluid py-5">
+      <div class="row text-light">
+        <!-- Left Panel -->
+        <div class="col-md-4 border-end pe-0 left-panel">
+          <div class="json-panel">
+            <pre class="json-content"><code>{
+              <span style="color:#9CDCFE">"name"</span>: <span style="color:#CE9178">"Filip Matić"</span>,
+              <span style="color:#9CDCFE">"location"</span>: <span style="color:#CE9178">"Split, Croatia"</span>,
+              <span class="json-toggle" onclick="toggleNode(this)">
+                <span class="caret">▶</span> <span style="color:#9CDCFE">"education"</span>:
+                </span> {
+              <div class="json-node collapsed">
+                <span style="color:#9CDCFE">"highSchool"</span>: <span style="color:#CE9178">"Čapljina Gymnasium"</span>,
+<span class="json-toggle" onclick="toggleNode(this)">
+              <span class="caret">▶</span> <span style="color:#9CDCFE">"university"</span>:
+            </span> [
+              <div class="json-node collapsed">
+                <span style="color:#CE9178">"University of applied sciences Zagreb, Bacc of Information technologies"</span>,
+                <span style="color:#CE9178">"Faculty of Science Split, MSc Data science"</span>,
+              </div>
+            ]              </div>
+            },
+            <span class="json-toggle" onclick="toggleNode(this)">
+              <span class="caret">▶</span> <span style="color:#9CDCFE">"skills"</span>:
+            </span> [
+              <div class="json-node collapsed">
+                <span style="color:#CE9178">"Python"</span>,
+                <span style="color:#CE9178">"JavaScript"</span>,
+                <span style="color:#CE9178">"C#"</span>,
+                <span style="color:#CE9178">"D3.js"</span>,
+                <span style="color:#CE9178">"TensorFlow"</span>
+              </div>
+            ]
+          }</code></pre>
+          </div>
+        </div>
+
+        <!-- Center Panel -->
+        <div class="col-md-4 border-end px-4">
+          <pre><code>
+              /**
+              * About me
+              * I’m a final year data science student, passionate about machine learning,
+              * data engineering, and building intelligent systems.
+              * Currently finishing my MSc at the Faculty of Science in Split.
+              *
+              * I'm especially interested in AI-driven products and have experience
+              * in web development, ML model deployment, and data pipelines.
+              * 
+              */
+      </code></pre>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="col-md-4">
+          <h3 class="mb-3">💻 Skills & Proficiency</h3>
+
+          <!-- Category buttons -->
+          <div class="btn-group mb-3" role="group" id="skillButtons">
+            <button class="btn btn-outline-light" onclick="showSkill('ml')">
+              <i class="bi bi-robot me-1"></i>Machine Learning
+            </button>
+            <button class="btn btn-outline-light" onclick="showSkill('web')">
+              <i class="bi bi-globe2 me-1"></i>Web Development
+            </button>
+            <button class="btn btn-outline-light" onclick="showSkill('python')">
+              <i class="bi bi-file-code me-1"></i>Python
+            </button>
+            <button class="btn btn-outline-light" onclick="showSkill('python')">
+              <i class="bi bi-file-code me-1"></i>Graphic design
+            </button>
+            <button class="btn btn-outline-light" onclick="showSkill('python')">
+              <i class="bi bi-file-code me-1"></i>Data science
+            </button>
+          </div>
+
+          <!-- Progress bars -->
+          <div id="skillDetails" class="bg-dark p-4 rounded shadow-sm">
+            <!-- Filled dynamically with JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bar py-3">
+      <div class="container d-flex justify-content-between">
+        <span>find me on: <a href="#" class="text- fw-bold ms-2">ln</a></span>
+        <span>Username <i class="bi bi-github"></i></span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function toggleNode(toggle) {
+        const caret = toggle.querySelector(".caret");
+        const node = toggle.nextElementSibling;
+
+        const isExpanded = node.classList.contains("active");
+        caret.classList.toggle("rotate", !isExpanded);
+        node.classList.toggle("active", !isExpanded);
+      }
+
+      const skillData = {
+        ml: {
+          title: "Machine Learning",
+          bars: [
+            { label: "Experience", value: 70 },
+            { label: "Knowledge", value: 85 },
+            { label: "Confidence", value: 75 },
+          ],
+        },
+        web: {
+          title: "Web Development",
+          bars: [
+            { label: "Experience", value: 90 },
+            { label: "Knowledge", value: 80 },
+            { label: "Confidence", value: 85 },
+          ],
+        },
+        python: {
+          title: "Python",
+          bars: [
+            { label: "Experience", value: 95 },
+            { label: "Knowledge", value: 90 },
+            { label: "Confidence", value: 88 },
+          ],
+        },
+      };
+
+      function showSkill(category) {
+        const container = document.getElementById("skillDetails");
+        const { title, bars } = skillData[category];
+
+        container.innerHTML = `<h4 class="mb-3">${title}</h4>`;
+
+        bars.forEach((bar) => {
+          const id = `progress-${bar.label.toLowerCase()}`;
+          container.innerHTML += `
+            <div class="mb-2">${bar.label}</div>
+            <div class="progress bg-secondary">
+              <div id="${id}" class="progress-bar bg-warning" role="progressbar" style="width: 0%;" aria-valuenow="${bar.value}" aria-valuemin="0" aria-valuemax="100">
+                ${bar.value}%
+              </div>
+            </div>
+          `;
+        });
+
+        // Animate bars
+        setTimeout(() => {
+          bars.forEach((bar) => {
+            const el = document.getElementById(
+              `progress-${bar.label.toLowerCase()}`
+            );
+            el.style.width = `${bar.value}%`;
+          });
+        }, 100);
+      }
+
+      // Show one by default
+      window.onload = () => showSkill("ml");
+    </script>
+  </body>
+</html>
