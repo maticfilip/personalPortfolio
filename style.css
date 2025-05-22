@@ -192,3 +192,131 @@ body {
 .progress-bar{
   transition:width 1s ease-in-out;
 }
+
+
+.projects-section {
+  padding: 60px 40px;
+  color: #ccc;
+}
+
+.section-heading {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #ffaa00;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+
+.project-title {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #00ffff;
+  text-align: center;
+  word-break: break-word;
+}
+
+
+.project-tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.tag {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #00ffcc;
+  background-color: rgba(0, 255, 204, 0.1);
+  border: 1px solid #00ffcc;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.tag:hover {
+  background-color: rgba(0, 255, 204, 0.3);
+}
+
+
+.project-card {
+  position: relative;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 250px;
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height:auto;
+}
+
+.project-card:hover {
+  padding-bottom: 2rem;
+  background-color: #282828;
+  border-color: #00ffee;
+}
+
+.project-thumb {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.project-title {
+  font-size: 1rem;
+  color: #00ffcc;
+  margin-bottom: 0.5rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: #00ffcc;
+  background-color: rgba(0, 255, 204, 0.1);
+  border: 1px solid #00ffcc;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.project-hover-content {
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.project-card:hover .project-hover-content {
+  opacity: 1;
+  max-height: 300px; /* allow enough room for larger content */
+  margin-top: 0.5rem;
+}
+
+.project-hover-content a {
+  color: #00ffee;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+
+.project-hover-content a:hover {
+  text-decoration: underline;
+}

@@ -150,6 +150,135 @@
       </div>
     </section>
 
+    <section id="projects" class="projects-section">
+      <h2 class="section-heading">// Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img
+            src="images.jfif"
+            alt="Project 1 Thumbnail"
+            class="project-thumb"
+          />
+          <div class="project-title">const project1 = "MMA Predictor"</div>
+          <div class="project-tags">
+            <span class="tag">#python</span>
+            <span class="tag">#machineLearning</span>
+          </div>
+          <div class="project-hover-content">
+            <p>
+              A simple project for uni class Intro to Machine learning. The
+              project is a RandomForest model that predicts winners of UFC
+              matches on a specific event.
+            </p>
+            <a
+              href="https://github.com/maticfilip/MMA_predictor"
+              target="_blank"
+              >-> View on GitHub</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img
+            src="Number-Plate-Detection.png"
+            alt="Project 2 Thumbnail"
+            class="project-thumb"
+          />
+          <div class="project-title">
+            const project2 = "License plate reader"
+          </div>
+          <div class="project-tags">
+            <span class="tag">#python</span>
+            <span class="tag">#machineLearning</span>
+            <span class="tag">#paper</span>
+          </div>
+          <div class="project-hover-content">
+            <p>
+              This project is my first interaction with computer vision and
+              CNN's. Using the YOLO algorithm and Tesseract OCR, I created a
+              simple pipeline that detects a car license plate, takes a picture
+              and reads the plate. Except for the practical part, it includes a
+              paper explaining the theoretical background.
+            </p>
+            <a
+              href="https://github.com/maticfilip/MMA_predictor"
+              target="_blank"
+              >-> View on GitHub</a
+            >
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="images1.png"
+            alt="Project 3 Thumbnail"
+            class="project-thumb"
+          />
+          <div class="project-title">const project3 = "PDFEditor"</div>
+          <div class="project-tags">
+            <span class="tag">#python</span>
+            <span class="tag">#tkinter</span>
+          </div>
+          <div class="project-hover-content">
+            <p>
+              A personal project that is still being worked on. I am developing it as a way to practice Python and familiriase myself with GUI development. It includes a PDF cropper, resizer and splitter so far. 
+            </p>
+            <a
+              href="https://github.com/maticfilip/MMA_predictor"
+              target="_blank"
+              >-> View on GitHub</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+        <img
+            src="tracker.png"
+            alt="Project 4 Thumbnail"
+            class="project-thumb"
+          />
+          <div class="project-title">
+            const project4 = "Job application tracker"
+          </div>
+          <div class="project-tags">
+            <span class="tag">#python</span>
+            <span class="tag">#tkinter</span>
+          </div>
+          <div class="project-hover-content">
+            <p>
+              A personal project that is still being worked on. I am developing it as a way to practice Python and familiriase myself with GUI development. Got the idea for it after applying for the same job twice from different sites. App helps you track job applications, status of the applications and currentčy a job scrapper is being added. 
+            </p>
+            <a
+              href="https://github.com/maticfilip/MMA_predictor"
+              target="_blank"
+              >-> View on GitHub</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="cnn.jpg" alt="Project 5 Thumbnail" class="project-thumb" />
+          <div class="project-title">
+            const project5 = "CNN Transfer learning optimization"
+          </div>
+          <div class="project-tags">
+            <span class="tag">#python</span>
+            <span class="tag">#machineLearning</span>
+            <span class="tag">#paper</span>
+          </div>
+          <div class="project-hover-content">
+            <p>
+              This project is being developed as a way to support my claims in a paper I'm writing. The paper is "Optimization of Transfer learning in Convolutional Neural Networks". Project is optimising a MobileNet model using varius transfer learning methods and the progress is being tracked on a task of binary classification of pneumonia on x-ray images.
+            </p>
+            <a
+              href="https://github.com/maticfilip/MMA_predictor"
+              target="_blank"
+              >-> View on GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer-bar py-3">
       <div class="container d-flex justify-content-between">
@@ -159,75 +288,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      function toggleNode(toggle) {
-        const caret = toggle.querySelector(".caret");
-        const node = toggle.nextElementSibling;
-
-        const isExpanded = node.classList.contains("active");
-        caret.classList.toggle("rotate", !isExpanded);
-        node.classList.toggle("active", !isExpanded);
-      }
-
-      const skillData = {
-        ml: {
-          title: "Machine Learning",
-          bars: [
-            { label: "Experience", value: 70 },
-            { label: "Knowledge", value: 85 },
-            { label: "Confidence", value: 75 },
-          ],
-        },
-        web: {
-          title: "Web Development",
-          bars: [
-            { label: "Experience", value: 90 },
-            { label: "Knowledge", value: 80 },
-            { label: "Confidence", value: 85 },
-          ],
-        },
-        python: {
-          title: "Python",
-          bars: [
-            { label: "Experience", value: 95 },
-            { label: "Knowledge", value: 90 },
-            { label: "Confidence", value: 88 },
-          ],
-        },
-      };
-
-      function showSkill(category) {
-        const container = document.getElementById("skillDetails");
-        const { title, bars } = skillData[category];
-
-        container.innerHTML = `<h4 class="mb-3">${title}</h4>`;
-
-        bars.forEach((bar) => {
-          const id = `progress-${bar.label.toLowerCase()}`;
-          container.innerHTML += `
-            <div class="mb-2">${bar.label}</div>
-            <div class="progress bg-secondary">
-              <div id="${id}" class="progress-bar bg-warning" role="progressbar" style="width: 0%;" aria-valuenow="${bar.value}" aria-valuemin="0" aria-valuemax="100">
-                ${bar.value}%
-              </div>
-            </div>
-          `;
-        });
-
-        // Animate bars
-        setTimeout(() => {
-          bars.forEach((bar) => {
-            const el = document.getElementById(
-              `progress-${bar.label.toLowerCase()}`
-            );
-            el.style.width = `${bar.value}%`;
-          });
-        }, 100);
-      }
-
-      // Show one by default
-      window.onload = () => showSkill("ml");
-    </script>
   </body>
 </html>
